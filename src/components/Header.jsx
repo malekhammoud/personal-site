@@ -77,10 +77,10 @@ function MoonIcon(props) {
   )
 }
 
-function MobileNavItem({ href, children }) {
+function MobileNavItem({ href, target, children }) {
   return (
     <li>
-      <PopoverButton as={Link} href={href} className="block py-2">
+      <PopoverButton as={Link} href={href} target={target} className="block py-2">
         {children}
       </PopoverButton>
     </li>
@@ -117,7 +117,7 @@ function MobileNavigation(props) {
             <MobileNavItem href="/articles">Articles</MobileNavItem>
             <MobileNavItem href="/news">Newsletter</MobileNavItem>
             <MobileNavItem href="/projects">Projects</MobileNavItem>
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
+            <MobileNavItem href="/resume.pdf" target="_blank">Resume</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -125,13 +125,14 @@ function MobileNavigation(props) {
   )
 }
 
-function NavItem({ href, children }) {
+function NavItem({ href, target, children }) {
   let isActive = usePathname() === href
 
   return (
     <li>
       <Link
         href={href}
+        target={target}
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
@@ -156,7 +157,7 @@ function DesktopNavigation(props) {
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
         <NavItem href="/news">Newsletter</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        <NavItem href="/resume.pdf"   target="_blank">Resume</NavItem>
       </ul>
     </nav>
   )
