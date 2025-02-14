@@ -25,7 +25,7 @@ function Tool({ title, href, children }) {
 
 export const metadata = {
   title: 'My Tech Stack',
-  description: 'A rundown of the software, tools, and languages that power my projects and fuel my passion for development.'
+  description: 'A rundown of the softwares, tools, and languages that power my projects and fuel my passion for development.'
 }
 
 export default function Uses() {
