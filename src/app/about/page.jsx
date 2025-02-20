@@ -62,24 +62,7 @@ export default function About() {
             I’m Malek Hammoud. A programmer and robotics enthusiast driven by curiosity!
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>
-              My journey in tech began back in Lebanon, where I was born. I moved to Canada in 2015 at age 8, and in
-              Grade 3, I started exploring programming with Scratch. Those first projects sparked my interest, and by
-              Grade 7, I was diving into JavaScript on Khan Academy. Coding quickly became a passion, and I’ve been
-              learning and building ever since.
-            </p>
-            <p>
-              Today, I love creating websites, building games, and designing autonomous robots. Learning on my own gave
-              me freedom to explore my interests in new ways, which led me to experiment with machine learning and
-              robotics starting in Grade 9. Since then, I've taken on a variety of projects, from web applications to
-              complex robotics systems.
-            </p>
-            <p>
-              As a tech enthusiast, I’m constantly pushing myself to innovate and solve real-world challenges through
-              technology. Whether it's programming a new application, developing an AI model, or building a robot, I'm
-              passionate about expanding my skills and contributing to meaningful projects. I'm excited to keep learning
-              and sharing my work with others!
-            </p>
+            <p> My tech journey began with exploring programming using Scratch and JavaScript, which sparked my passion for web development and technology. Early projects helped me develop proficiency in building dynamic websites and interactive applications. </p> <p> Over the years, I've expanded my skills to include creating games, designing robotics systems, and experimenting with machine learning to solve real-world challenges. I’m constantly learning and pushing myself to innovate and improve. </p> <p> My passion for tech drives me to continuously share my work and contribute to meaningful projects. </p>
           </div>
         </div>
 
