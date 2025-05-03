@@ -2,6 +2,7 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/news'
 import { formatDate } from '@/lib/formatDate'
+import { NewsletterForm } from '@/components/NewsletterForm'
 
 function Article({ article }) {
   return (
@@ -52,6 +53,9 @@ export default async function ArticlesIndex() {
                 <Article key={article.slug} article={article} />
             ))}
           </div>
+        </div>
+        <div className="mt-12">
+          <NewsletterForm />
         </div>
       </SimpleLayout>
   )
