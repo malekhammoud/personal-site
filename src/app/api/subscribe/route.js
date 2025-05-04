@@ -1,23 +1,25 @@
-// src/app/api/subscribe/route.js
-import { NextResponse } from 'next/server'
-import sql from '@/lib/db'
+import { neon } from '@neondatabase/serverless';
 
 export async function POST(request) {
   try {
-    const { email } = await request.json()
-    if (!email || typeof email !== 'string') {
-      return NextResponse.json({ error: 'Email is required' }, { status: 400 })
+    const { email } = await request.json();
+    const sql = neon(`${process.env.DATABASE_URL}`);
+
+    // Check if the email is already subscribed:
+    const existing = await sql`SELECT email FROM emails WHERE email = ${email}`;
+    if(existing.length > 0) {
+      return new Response(JSON.stringify({ error: "Email already subscribed" }), { status: 400 });
     }
 
-    const existing = await sql`SELECT email FROM emails WHERE email = ${email}`
-    if (existing.length) {
-      return NextResponse.json({ error: 'Email already subscribed' }, { status: 400 })
-    }
-
-    await sql`INSERT INTO emails (email) VALUES (${email})`
-    return NextResponse.json({ success: true }, { status: 201 })
-  } catch (error) {
-    console.error('subscribe route error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    // Insert the email into the "emails" table:
+    await sql`INSERT INTO emails (email) VALUES (${email})`;
+    return new Response(JSON.stringify({ ok: true }), { status: 200 });
+  } catch (err) {
+    console.error("Error subscribing:", err);
+    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
   }
+}
+
+export function GET() {
+  return new Response(null, { status: 405 });
 }
