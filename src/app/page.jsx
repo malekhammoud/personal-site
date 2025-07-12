@@ -556,18 +556,17 @@ export default async function Home() {
   return (
     <>
       {/* Terminal intro first */}
-      <Container className="mt-9 relative z-50">
-        <div className="relative z-50" style={{ zIndex: 50, position: 'relative' }}>
+      <Container className="mt-9 relative">
+        <div className="relative">
           <TerminalIntro />
         </div>
       </Container>
-
 
       {/* Enhanced animated carousel */}
       <EnhancedCarousel />
 
       {/* Timeline Resume Section */}
-      <Container className="mt-24 md:mt-28 relative z-10">
+      <Container className="mt-24 md:mt-28 relative">
         <div className="mx-auto max-w-4xl">
           <TimelineResume />
         </div>

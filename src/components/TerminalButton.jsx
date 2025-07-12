@@ -27,7 +27,7 @@ export function TerminalButton() {
   // Don't render until mounted to prevent hydration mismatch
   if (!isMounted) {
     return (
-      <div className="relative z-[100]">
+      <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-block bg-zinc-100 dark:bg-zinc-800 text-zinc-400 py-4 px-8 rounded-xl">
             <div className="animate-pulse">Loading terminal...</div>
@@ -38,13 +38,13 @@ export function TerminalButton() {
   }
 
   return (
-    <div className="relative z-[100]" style={{ zIndex: 100, position: 'relative' }}>
+    <div className="relative z-10" style={{ zIndex: 10, position: 'relative' }}>
       {/* Elegant Terminal Button */}
       <div className="text-center mb-8">
         <button
           type="button"
           onClick={handleOpenTerminal}
-          className="group relative z-[100] inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold
+          className="group relative z-10 inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold
                      text-white dark:text-zinc-100
                      bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-800
                      dark:from-zinc-800 dark:via-zinc-900 dark:to-zinc-800
@@ -55,7 +55,7 @@ export function TerminalButton() {
                      hover:border-zinc-500 dark:hover:border-zinc-500
                      transition-all duration-300 ease-out transform hover:scale-105 active:scale-95"
           style={{
-            zIndex: 100,
+            zIndex: 10,
             position: 'relative',
             pointerEvents: 'auto'
           }}
