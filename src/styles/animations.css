@@ -138,35 +138,22 @@
 }
 
 .animate-scroll {
-  animation: scroll 60s linear infinite;
+  animation: scroll 6s linear infinite;
 }
 
 .animate-scroll-reverse {
-  animation: scroll-reverse 45s linear infinite;
+  animation: scroll-reverse 4s linear infinite;
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+/* Much slower speed for desktop/larger screens since viewers can see more photos */
+@media (min-width: 768px) {
+  .animate-scroll {
+    animation-duration: 25s;
+  }
 
-@keyframes scroll-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-.animate-gradient-x {
-  animation: gradient-x 3s ease infinite;
-  background-size: 200% 200%;
-}
-
-@keyframes gradient-x {
-  0%, 100% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.animate-spin-slow {
-  animation: spin 8s linear infinite;
+  .animate-scroll-reverse {
+    animation-duration: 20s;
+  }
 }
 
 .carousel-container {
@@ -182,6 +169,15 @@
 .floating-element {
   animation-duration: 6s;
   animation-iteration-count: infinite;
+}
+
+/* Slow down animation on hover instead of pausing */
+.carousel-container:hover .animate-scroll {
+  animation-duration: 40s;
+}
+
+.carousel-container:hover .animate-scroll-reverse {
+  animation-duration: 35s;
 }
 
 /* Additional effects */

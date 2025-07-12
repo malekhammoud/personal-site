@@ -271,9 +271,7 @@ function EnhancedCarousel() {
             />
           </h2>
           <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Welcome to my digital playground! I'm a passionate full-stack developer and robotics engineer
-            who turns caffeine into code and dreams into reality. From building AI-powered applications to
-            engineering autonomous systems, I create technology that makes a difference.
+            Malek Hammoud is a dedicated programmer, robotics enthusiast, and Innovator based in London, Ontario, Canada. Passionate about building innovative websites, immersive games, and pioneering robotics systems, he applies his expertise in full-stack development, machine learning, and agile methodologies to tackle real-world challenges.
           </p>
 
           {/* Social links - new addition */}
