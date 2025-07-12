@@ -31,7 +31,6 @@ import greenImage from '@/images/projects/green.png'
 import javagameGif from '@/images/projects/javagame.gif'
 import linuxImage from '@/images/projects/linux.png'
 import mazeGif from '@/images/projects/maze.gif'
-import offshapeGif from '@/images/projects/offshape.gif'
 import postureGif from '@/images/projects/posture.gif'
 import reminderappImage from '@/images/projects/reminderapp.png'
 import reconnectImage from '@/images/projects/reconnect.png'
@@ -250,7 +249,7 @@ function EnhancedCarousel() {
     // Mix photos and project images/gifs
     img0254, img0547, img0920, img0922, img0926, img1027,
     centralwebImage, ecosouteImage, greenImage,
-    javagameGif, linuxImage, mazeGif, offshapeGif, postureGif,
+    javagameGif, linuxImage, mazeGif, postureGif,
     reminderappImage, reconnectImage, droneImage, eco
   ]
 
