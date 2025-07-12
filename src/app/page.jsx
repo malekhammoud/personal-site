@@ -292,7 +292,7 @@ function EnhancedCarousel() {
           {[...allImages, ...allImages].map((image, index) => (
             <div
               key={`${image.src || image}-${index}`}
-              className="carousel-item relative flex-none w-64 h-80 overflow-hidden rounded-xl shadow-lg bg-zinc-50 dark:bg-zinc-800 transition-transform duration-300 hover:scale-105"
+              className="carousel-item relative flex-none w-64 h-80 overflow-hidden rounded-xl shadow-lg bg-zinc-50 dark:bg-zinc-800"
             >
               <Image
                 src={image}
@@ -312,7 +312,7 @@ function EnhancedCarousel() {
           {[...allImages.slice().reverse(), ...allImages.slice().reverse()].map((image, index) => (
             <div
               key={`reverse-${image.src || image}-${index}`}
-              className="carousel-item relative flex-none w-48 h-60 overflow-hidden rounded-lg shadow-md bg-zinc-50 dark:bg-zinc-800 transition-transform duration-300 hover:scale-105"
+              className="carousel-item relative flex-none w-48 h-60 overflow-hidden rounded-lg shadow-md bg-zinc-50 dark:bg-zinc-800"
             >
               <Image
                 src={image}

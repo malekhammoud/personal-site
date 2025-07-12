@@ -171,23 +171,7 @@
   animation-iteration-count: infinite;
 }
 
-/* Slow down animation on hover instead of pausing */
-.carousel-container:hover .animate-scroll {
-  animation-duration: 40s;
-}
-
-.carousel-container:hover .animate-scroll-reverse {
-  animation-duration: 35s;
-}
-
-/* Additional effects */
-.carousel-item {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel-item:hover {
-  filter: brightness(1.1) contrast(1.1);
-}
+/* Removed hover effects for cleaner experience */
 
 @media (prefers-reduced-motion: reduce) {
   .typing-animation,
