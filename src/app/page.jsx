@@ -499,28 +499,28 @@ function SupportedBy() {
             Proud to work with organizations that believe in innovation and growth
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 items-center">
             {supportingCompanies.map((company, index) => (
               <div
                 key={index}
-                className="group flex flex-col items-center p-6 transition-all duration-300 hover:scale-105"
+                className="group flex flex-col items-center p-3 md:p-6 transition-all duration-300 hover:scale-105"
                 title={`${company.name} - ${company.description}`}
               >
-                {/* Larger logos without background circles */}
-                <div className="flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                {/* Responsive logos - medium size on mobile, larger on desktop */}
+                <div className="flex items-center justify-center mb-3 md:mb-4 transition-transform duration-300 group-hover:scale-110">
                   {/* Handle TKS with light/dark mode logos */}
                   {company.lightLogo && company.darkLogo ? (
                     <>
                       <Image
                         src={company.darkLogo}
                         alt={company.name}
-                        className="h-20 w-20 object-contain dark:hidden"
+                        className="h-16 w-16 md:h-20 md:w-20 object-contain dark:hidden"
                         unoptimized
                       />
                       <Image
                         src={company.lightLogo}
                         alt={company.name}
-                        className="h-20 w-20 object-contain hidden dark:block"
+                        className="h-16 w-16 md:h-20 md:w-20 object-contain hidden dark:block"
                         unoptimized
                       />
                     </>
@@ -528,12 +528,13 @@ function SupportedBy() {
                     <Image
                       src={company.logo}
                       alt={company.name}
+                      className="h-16 w-16 md:h-20 md:w-20 object-contain"
                       unoptimized
                     />
                   )}
                 </div>
-                {/* Company name and description on hover */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* Company name and description - always visible on mobile, hover on desktop */}
+                <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-1 text-center">
                     {company.name}
                   </h3>
