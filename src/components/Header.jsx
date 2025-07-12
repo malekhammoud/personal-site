@@ -196,7 +196,7 @@ export function Header() {
             <div className="flex flex-1">
               <div className={clsx(
                 'rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
-                isHomePage ? 'h-32 w-32' : 'h-10 w-10'
+                isHomePage ? 'h-20 w-20 sm:h-32 sm:w-32' : 'h-10 w-10'
               )}>
                 <Link
                   href="/"
@@ -206,10 +206,10 @@ export function Header() {
                   <Image
                     src={avatarImage}
                     alt=""
-                    sizes={isHomePage ? '8rem' : '2.25rem'}
+                    sizes={isHomePage ? '(max-width: 640px) 5rem, 8rem' : '2.25rem'}
                     className={clsx(
                       'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-                      isHomePage ? 'h-32 w-32' : 'h-9 w-9'
+                      isHomePage ? 'h-20 w-20 sm:h-32 sm:w-32' : 'h-9 w-9'
                     )}
                     priority
                   />
