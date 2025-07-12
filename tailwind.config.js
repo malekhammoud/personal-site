@@ -35,6 +35,36 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    extend: {
+      animation: {
+        'scroll': 'scroll 60s linear infinite',
+        'scroll-reverse': 'scroll-reverse 45s linear infinite',
+        'gradient-x': 'gradient-x 3s ease infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'glitch': 'glitch 2s infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'gradient-x': {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+        },
+        glitch: {
+          '0%, 98%': { transform: 'translate(0)' },
+          '1%': { transform: 'translate(-2px, 2px)' },
+          '2%': { transform: 'translate(2px, -2px)' },
+          '3%': { transform: 'translate(-2px, 2px)' },
+          '4%': { transform: 'translate(2px, -2px)' },
+        },
+      },
+    },
     typography: typographyStyles,
   },
 }

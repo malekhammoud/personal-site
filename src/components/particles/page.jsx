@@ -15,6 +15,10 @@ export function Particles() {
     }, []); // Empty dependency array means this runs only once after initial mount
 
     return (
-        <div id="particles-js"></div>
+        <div
+            id="particles-js"
+            style={{ pointerEvents: 'none' }}
+            className="absolute inset-0 z-0"
+        ></div>
     );
 }

@@ -4,11 +4,13 @@ import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { NewsletterForm } from '@/components/NewsletterForm'
 import Image from 'next/image'
-// Import metadata from the separate file
-import { metadata } from './metadata'
 
-// Export the metadata
-export { metadata }
+// Define metadata directly in this file
+export const metadata = {
+  title: 'Articles',
+  description:
+    'All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.',
+}
 
 function Article({ article }) {
   return (

@@ -3,6 +3,7 @@ import { Layout } from '@/components/Layout'
 import { Particles } from '@/components/particles/page'
 
 import '@/styles/tailwind.css'
+import '@/styles/animations.css'
 
 export const metadata = {
     title: {

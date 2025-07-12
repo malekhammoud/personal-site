@@ -10,6 +10,9 @@ import robot from '@/images/projects/robot.png';
 
 
 import p1 from '@/images/projects/green.png';
+import drone from '@/images/projects/drone.gif';
+import eco from '@/images/projects/ecosphere.png';
+import reconnect from '@/images/projects/reconnect.png';
 import p2 from '@/images/projects/linux.png';
 import p3 from '@/images/projects/javagame.gif';
 import p4 from '@/images/projects/centralweb.png';
@@ -26,9 +29,25 @@ const projects = [
     name: 'GreenGuardian',
     description:
         'GreenGuardian is an autonomous robot that uses 3D printing, image processing, and obstacle avoidance to precisely spray weeds. It minimizes herbicide use and reduces environmental impact.',
-    link: { href: 'https://partner.projectboard.world/ysc/project/greenguardian-automated-weed-detection-and-elimination', label: '2024 CWSF Project Board >' },
+    link: { href: 'https://partner.projectboard.world/ysc/project/greenguardian-automated-weed-detection-and-elimination', label: '2024 CWSF Project Board' },
     logo: robot,
     image: p1,
+  },
+  {
+    name: 'Autonomous Litter Detection',
+    description:
+      'Building a low-cost, proof-of-concept autonomous system for detecting and mapping litter using drones. This project aims to enhance environmental monitoring and community engagement.',
+    link: { href: 'https://www.notion.so/tksworld/Autonomous-Litter-Detection-Mapping-System-1f60b470b010802ba60cd8a57ee73b0e', label: '2025 TKS Focus Project' },
+    logo: robot,
+    image: drone,
+  },
+  {
+    name: 'EcoSphere',
+    description:
+      'An all-in-one platform designed to power conservation teams globally—identify species with photo recognition, communicate instantly through team chat, and collaborate seamlessly. Your mission control for ecosystem protection.',
+    link: { href: 'https://www.eco-sphere.co/', label: '2025 SolutionsHacks Project (team)' },
+    logo: webdev,
+    image: eco,
   },
   {
     name: 'Linux Exploration',
@@ -37,6 +56,14 @@ const projects = [
     link: { href: '#', label: '' },
     logo: webdev,
     image: p2,
+  },
+  {
+    name: 'Reconnect',
+    description:
+      'Top-down shooter where players collect parts to fix a broken computer circuit while avoiding enemies.',
+    link: { href: 'https://github.com/malekhammoud/Reconnect', label: 'Github >' },
+    logo: game,
+    image: reconnect,
   },
   {
     name: '1v1 Platformer Game',
